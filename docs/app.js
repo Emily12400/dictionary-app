@@ -2,6 +2,11 @@ const form = document.getElementById('lookup-form');
 const input = document.getElementById('word');
 const result = document.getElementById('result');
 
+input.addEventListener('input', () => {
+  form.requestSubmit();
+});
+
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const word = input.value.trim();
